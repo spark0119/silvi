@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }} - Silvi</title>
+    {% else %}
+    <title>Welcome to Silvi</title>
+    {% endif %}
+</head>
+<body>
+    <div>
+        Silvi:
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('reflection')}">Reflect Weekly</a>
+    </div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <url>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </url>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</body>
+</html>
