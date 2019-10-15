@@ -8,19 +8,8 @@ from werkzeug.urls import url_parse
 
 @app.route('/')
 @app.route('/index')
-@login_required
 def index():
-    posts = [
-        {
-            'author': {'username':'Chloe'},
-            'body': 'Your dad and I are having..'
-        },
-        {
-            'author': {'username':'Sean'},
-            'body': 'We are sitting in a cafe'
-        }
-    ]
-    return render_template('index.html', title='Home', posts=posts)
+    return render_template('index.html', title='Home')
 
 @app.route('/login', methods=['GET','POST'])
 def login():

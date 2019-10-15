@@ -1,8 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hello, {{ current_user.username }}!</h1>
-    {% for post in posts %}
-    <div><p>{{ post.author.username }} says: <b> {{ post.body }}</b></p></div>
-    {% endfor %}
+    <div class="hero">
+        <div class="icons">
+            <img class = "chloe_icon" src="{{ url_for('static', filename='img/Chloe icon.png') }}"/>
+            <img class = "sean_icon" src="{{ url_for('static', filename='img/Sean icon.png') }}"/>
+<!--            <input class="chloe_icon" type="image" src="/Users/ChloeK/Desktop/Silvi/Chloe icon.png" alt="Chloe icon">-->
+<!--            <input class="sean_icon" type="image" src="/Users/ChloeK/Desktop/Silvi/Sean icon.png" alt="Sean icon">-->
+        </div>
+
+        <span><h1 class="heading">Welcome to our home!
+        </h1></span>
+
+        <span><h2 class="discription">This is where Sean and Chloe</br>log their life :)
+        </h2></span>
+
+        <span>
+            <a class="button" href="{{ url_for('login') }}">Enter</a>
+        </span>
+    </div>
 {% endblock %}

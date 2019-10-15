@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Sign in</h1>
+    <div class="icons">
+         <h1>Login to a whole new world</h1>
+        <img class = "chloe_icon" src="{{ url_for('static', filename='img/Chloe icon.png') }}"/>
+        <img class = "sean_icon" src="{{ url_for('static', filename='img/Sean icon.png') }}"/>
+    </div>
     <form action ="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
@@ -19,7 +23,7 @@
             {% endfor %}
         </p>
         <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
+        <p>{{ form.submit(class_="button") }}</p>
     </form>
-<p>New User? <a href="{{url_for('register')}}">Click to Register!</a></p>
+<p>Want to sign up? <a href="{{url_for('register')}}">Click to Register!</a></p>
 {% endblock %}
