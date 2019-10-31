@@ -1,40 +1,4 @@
-2019-10-29 20:53:02,158 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 84, in weekly_reflection
-    form = ReflectionForm()
-NameError: name 'ReflectionForm' is not defined
-2019-10-29 20:54:27,620 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 20:54:29,414 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 84, in weekly_reflection
-    form = ReflectionForm()
-NameError: name 'ReflectionForm' is not defined
-2019-10-29 20:55:32,744 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 20:55:59,134 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+2019-10-31 10:24:56,880 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -51,10 +15,30 @@ Traceback (most recent call last):
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
   File "C:\Users\sean\Documents\silvi\app\routes.py", line 85, in weekly_reflection
-    form = ReflectionForm()
-NameError: name 'ReflectionForm' is not defined
-2019-10-29 20:57:34,537 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 20:57:36,520 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+    form = WeeklyReflectionForm()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_wtf\form.py", line 88, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\form.py", line 272, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\form.py", line 52, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\fields\core.py", line 353, in bind
+    return self.field_class(*self.args, **kw)
+TypeError: __init__() got an unexpected keyword argument 'placeholder'
+2019-10-31 10:25:43,942 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 10:28:38,088 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 10:32:09,093 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 10:32:57,107 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 10:34:34,461 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 10:34:59,000 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 10:41:14,479 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 10:44:14,691 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 10:48:07,376 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 10:48:13,109 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -70,66 +54,69 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 85, in weekly_reflection
-    form = ReflectionForm()
-NameError: name 'ReflectionForm' is not defined
-2019-10-29 20:57:48,309 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+  File "C:\Users\sean\Documents\silvi\app\routes.py", line 95, in weekly_reflection
+    return render_template('weekly_reflection.html', title='Weekly Reflection', form=form)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 85, in weekly_reflection
-    form = ReflectionForm()
-NameError: name 'ReflectionForm' is not defined
-2019-10-29 21:01:32,134 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 21:01:34,851 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 85, in weekly_reflection
-    form = ReflectionForm()
-NameError: name 'ReflectionForm' is not defined
-2019-10-29 21:05:35,380 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 21:05:37,768 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 85, in weekly_reflection
-    form = ReflectionForm()
-NameError: name 'ReflectionForm' is not defined
-2019-10-29 21:06:26,888 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\sean\Documents\silvi\app\templates\weekly_reflection.html", line 70, in template
+    <p>{{ form.submit(class_="button" id_="save_button") }}</p>
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 875, in subparse
+    add_data(self.parse_tuple(with_condexpr=True))
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 620, in parse_tuple
+    args.append(parse())
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 547, in parse_unary
+    node = self.parse_postfix(node)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 676, in parse_postfix
+    node = self.parse_call(node)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\parser.py", line 767, in parse_call
+    self.stream.expect('comma')
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'id_'
+2019-10-31 10:48:27,915 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]

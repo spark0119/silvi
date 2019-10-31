@@ -2,73 +2,73 @@
 
 {% block content %}
 
-    <div class="icons">
+    <div class="profile">
+        <img class = "chloe_icon" src="{{ url_for('static', filename='img/Chloe icon.png') }}"/>
         <h1>Weekly Reflection</h1>
-        <img class = "chloe_icon" src="{{ url_for('static', filename='img/chulchon.png') }}"/>
-        <link rel="stylesheet" href="/Users/ChloeK/Desktop/Silvi/dev/silvi.css">
-        <script src="https://kit.fontawesome.com/658ae97f7e.js" crossorigin="anonymous"></script>
     </div>
-
-    <div class = "questions">
-        <form action ="" method="post" novalidate>
-            {{ form.hidden_tag() }}
-            <p>
-                {{ form.q1.label }}<br>
-                {{ form.q1(size=32) }}
-            </p>
-            <p>
-                {{ form.q2.label }}<br>
-                {{ form.q2(size=32) }}
-            </p>
-            <p>
-                {{ form.q3.label }}<br>
-                {{ form.q3(size=32) }}
-            </p>
-            <p>
-                {{ form.q4.label }}<br>
-                {{ form.q4(size=32) }}
-            </p>
-            <p>
-                {{ form.q5.label }}<br>
-                {{ form.q5(size=32) }}
-            </p>
-            <p>
-                {{ form.q6.label }}<br>
-                {{ form.q6(size=32) }}
-            </p>
-            <p>
-                {{ form.q7.label }}<br>
-                {{ form.q7(size=32) }}
-            </p>
-            <p>
-                {{ form.q8.label }}<br>
-                {{ form.q8(size=32) }}
-            </p>
-            <p>
-                {{ form.q9.label }}<br>
-                {{ form.q9(size=32) }}
-            </p>
-            <p>
-                {{ form.q10.label }}<br>
-                {{ form.q10(size=32) }}
-            </p>
-            <p>
-                {{ form.q11.label }}<br>
-                {{ form.q11(size=32) }}
-            </p>
-            <p>
-                {{ form.q12.label }}<br>
-                {{ form.q12(size=32) }}
-            </p>
-            <p>
-                {{ form.q13.label }}<br>
-                {{ form.q13(size=32) }}
-            </p>
-            <p>
-                {{ form.q14.label }}<br>
-                {{ form.q14(size=32) }}
-            </p>
-            <p>{{ form.submit(class_="button") }}</p>
-        </form>
+    <div class = "container">
+        <div class="questions">
+            <form class = "reflection_template" action ="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.q1.label }}<br>
+                    {{ form.q1(size=32) }}
+                </p>
+                <p>
+                    {{ form.q2.label }}<br>
+                    {{ form.q2(size=32) }}
+                </p>
+                <p>
+                    {{ form.q3.label }}<br>
+                    {{ form.q3(size=32) }}
+                </p>
+                <p>
+                    {{ form.q4.label }}<br>
+                    {{ form.q4(size=32) }}
+                </p>
+                <p>
+                    {{ form.q5.label }}<br>
+                    {{ form.q5(size=32) }}
+                </p>
+                <p>
+                    {{ form.q6.label }}<br>
+                    {{ form.q6(size=32) }}
+                </p>
+                <p>
+                    {{ form.q7.label }}<br>
+                    {{ form.q7(size=32) }}
+                </p>
+                <p>
+                    {{ form.q8.label }}<br>
+                    {{ form.q8(size=32) }}
+                </p>
+                <p>
+                    {{ form.q9.label }}<br>
+                    {{ form.q9(size=32) }}
+                </p>
+                <p>
+                    {{ form.q10.label }}<br>
+                    {{ form.q10(size=32) }}
+                </p>
+                <p>
+                    {{ form.q11.label }}<br>
+                    {{ form.q11(size=32) }}
+                </p>
+                <p>
+                    {{ form.q12.label }}<br>
+                    {{ form.q12(size=32) }}
+                </p>
+                <p>
+                    {{ form.q13.label }}<br>
+                    {{ form.q13(size=32) }}
+                </p>
+                <p>
+                    {{ form.q14.label }}<br>
+                    {{ form.q14(size=32) }}
+                </p>
+                </br>
+                <p>{{ form.submit(class_="button", id="save_button") }}</p>
+            </form>
+        </div>
     </div>
 {% endblock %}

@@ -1,92 +1,13 @@
-2019-10-29 21:07:07,774 ERROR: Exception on / [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+2019-10-31 10:51:05,138 ERROR: Exception on /weekly_reflection [POST] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 12, in index
-    return render_template('index.html', title='Home')
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\sean\Documents\silvi\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\sean\Documents\silvi\app\templates\base.html", line 23, in top-level template code
-    <a href="{{ url_for('weekly_reflection') }}">Weekly Reflection</a>
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'weekly_reflection'. Did you mean 'reflection' instead?
-2019-10-29 21:09:51,109 ERROR: Exception on / [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 12, in index
-    return render_template('index.html', title='Home')
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\sean\Documents\silvi\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\sean\Documents\silvi\app\templates\base.html", line 23, in top-level template code
-    <a href="{{ url_for('weekly_reflection') }}">Weekly Reflection</a>
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'weekly_reflection'. Did you mean 'reflection' instead?
-2019-10-29 21:10:30,902 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 21:10:44,654 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 21:10:58,359 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: weekly__reflection
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -102,27 +23,55 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 85, in weekly_reflection
-    form = WeeklyReflectionForm()
-NameError: name 'WeeklyReflectionForm' is not defined
-2019-10-29 21:11:46,642 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 21:14:27,052 ERROR: Exception on /weekly_reflection [POST] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+  File "C:\Users\sean\Documents\silvi\app\routes.py", line 92, in weekly_reflection
+    db.session.commit()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1027, in commit
+    self.transaction.commit()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\session.py", line 494, in commit
+    self._prepare_impl()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2459, in flush
+    self._flush(objects)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
     raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 87, in weekly_reflection
-    answer = Reflection(q1=form.q1.data, q2=form.q2.data, q3=form.q3.data, q4=form.q4.data,
-NameError: name 'Reflection' is not defined
-2019-10-29 21:15:31,759 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2557, in _flush
+    flush_context.execute()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 589, in execute
+    uow,
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 245, in save_obj
+    insert,
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1138, in _emit_insert_statements
+    statement, params
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: weekly__reflection
+[SQL: INSERT INTO weekly__reflection (user_id, submit_date, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (None, '2019-10-31 13:51:05.138480', 'asdf', '', '', '', '', '', '', '', '', '', '', '', '', '')]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2019-10-31 11:04:50,910 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 11:05:53,769 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]

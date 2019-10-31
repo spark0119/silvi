@@ -1,4 +1,4 @@
-2019-10-29 21:15:47,736 ERROR: Exception on /weekly_reflection [POST] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+2019-10-31 11:06:03,630 ERROR: Exception on /weekly_reflection [POST] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
     cursor, statement, parameters, context
@@ -71,6 +71,6 @@ Traceback (most recent call last):
     cursor.execute(statement, parameters)
 sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: weekly__reflection
 [SQL: INSERT INTO weekly__reflection (user_id, submit_date, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
-[parameters: (None, '2019-10-30 00:15:47.735606', 'qwer', '', '', '', '', '', '', '', '', '', '', 'cHLOBEAR', '', '')]
+[parameters: (None, '2019-10-31 14:06:03.628989', 'asdf', '', '', '', '', '', '', '', '', '', '', '', '', '')]
 (Background on this error at: http://sqlalche.me/e/e3q8)
-2019-10-31 09:45:08,903 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-31 11:06:54,636 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]

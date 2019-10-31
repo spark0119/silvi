@@ -1,10 +1,46 @@
-2019-10-29 21:15:47,736 ERROR: Exception on /weekly_reflection [POST] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+2019-10-11 11:16:57,660 ERROR: Exception on /login [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\sean\Documents\silvi\app\routes.py", line 18, in login
+    form = LoginForm()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_wtf\form.py", line 88, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\form.py", line 272, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\form.py", line 52, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\fields\core.py", line 353, in bind
+    return self.field_class(*self.args, **kw)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\wtforms\fields\core.py", line 702, in __init__
+    super(BooleanField, self).__init__(label, validators, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'class_'
+2019-10-11 11:17:47,675 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-11 11:20:45,907 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-29 16:48:37,456 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-29 19:43:40,374 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-29 19:54:06,985 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-29 19:54:57,486 ERROR: Exception on /register [POST] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
     cursor, statement, parameters, context
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\default.py", line 552, in do_execute
     cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such table: weekly__reflection
+sqlite3.IntegrityError: UNIQUE constraint failed: user.email
 
 The above exception was the direct cause of the following exception:
 
@@ -21,9 +57,7 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 92, in weekly_reflection
+  File "C:\Users\sean\Documents\silvi\app\routes.py", line 45, in register
     db.session.commit()
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 162, in do
     return getattr(self.registry(), name)(*args, **kwargs)
@@ -69,14 +103,13 @@ Traceback (most recent call last):
     cursor, statement, parameters, context
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\sqlalchemy\engine\default.py", line 552, in do_execute
     cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: weekly__reflection
-[SQL: INSERT INTO weekly__reflection (user_id, submit_date, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
-[parameters: (None, '2019-10-30 00:15:47.735606', 'qwer', '', '', '', '', '', '', '', '', '', '', 'cHLOBEAR', '', '')]
-(Background on this error at: http://sqlalche.me/e/e3q8)
-2019-10-31 09:45:08,903 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-31 09:45:23,887 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-31 10:18:51,971 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-31 10:18:58,137 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (username, email, password_hash, about_me, last_seen) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('helloworld', 'spark1901@gmail.com', 'pbkdf2:sha256:150000$jOniOMSR$cd8489bdb021f366ba6851459c21fe3fc8079d3f5a0420dab4241b943e90b151', None, '2019-10-29 22:54:57.485484')]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+2019-10-29 20:49:58,191 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-29 20:50:42,217 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-29 20:50:43,977 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -90,25 +123,7 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 95, in weekly_reflection
-    return render_template('weekly_refle    ction.html', title='Weekly Reflection', form=form)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\loaders.py", line 113, in load
-    source, filename, uptodate = self.get_source(environment, name)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 60, in get_source
-    return self._get_source_fast(environment, template)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: weekly_refle    ction.html
-2019-10-31 10:19:25,469 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-31 10:23:42,423 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-31 10:24:52,813 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+  File "C:\Users\sean\Documents\silvi\app\routes.py", line 84, in weekly_reflection
+    form = ReflectionForm()
+NameError: name 'ReflectionForm' is not defined
+2019-10-29 20:52:59,408 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]

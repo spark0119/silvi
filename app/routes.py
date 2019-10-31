@@ -58,7 +58,7 @@ def user(username):
     return render_template('user.html',user=user, posts=posts)
 
 @app.before_request
-def before_requiest():
+def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
@@ -92,4 +92,4 @@ def weekly_reflection():
         db.session.commit()
         flash('You have successfully submitted your reflection for the week!')
         return redirect(url_for('index'))
-    return render_template('weekly_refle    ction.html', title='Weekly Reflection', form=form)
+    return render_template('weekly_reflection.html', title='Weekly Reflection', form=form)
