@@ -37,6 +37,28 @@ class Post(db.Model):
     def __repr__(self):
         return '<Post {}>'.format(self.body)
 
+class Weekly_Reflection(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    submit_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    q1 = db.Column(db.String(140))
+    q2 = db.Column(db.String(140))
+    q3 = db.Column(db.String(140))
+    q4 = db.Column(db.String(140))
+    q5 = db.Column(db.String(140))
+    q6 = db.Column(db.String(140))
+    q7 = db.Column(db.String(140))
+    q8 = db.Column(db.String(140))
+    q9 = db.Column(db.String(140))
+    q10 = db.Column(db.String(140))
+    q11 = db.Column(db.String(140))
+    q12 = db.Column(db.String(140))
+    q13 = db.Column(db.String(140))
+    q14 = db.Column(db.String(140))
+
+    def __repr__(self):
+        return '<Weekly_Reflection {}>'.format(self.body)
+
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))

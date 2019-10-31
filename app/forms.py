@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
-from app.models import User
+from app.models import User, Weekly_Reflection
 
 class LoginForm(FlaskForm):
     username = StringField('Are you Chloe or Sean?', validators=[DataRequired()])
@@ -41,3 +41,25 @@ class EditProfileForm(FlaskForm):
             user = User.query.filter_by(username=self.username.data).first()
             if user is not None:
                 raise ValidationError('Please use a different username.')
+
+class PostForm(FlaskForm):
+    post = TextAreaField('Say your words', validators=[
+        DataRequired(), Length(min=1, max=140)])
+    submit = SubmitField('Submit')
+
+class WeeklyReflectionForm(FlaskForm):
+    q1 = StringField('🌱 What did I learn last week?', validators=[DataRequired()])
+    q2 = StringField('🍑 What was my greatest accomplishment over the past week?')
+    q3 = StringField('😊 Which moment from last week was the most memorable and why?')
+    q4 = StringField('💪 What’s the #1 thing I need to accomplish this week?')
+    q5 = StringField('😼 What can I do right now to make the week less stressful?')
+    q6 = StringField('🙈 What have I been avoiding that needs to get done?')
+    q7 = StringField('🦋 Is there anyone I’ve been meaning to talk to?')
+    q8 = StringField('😌 How can I help someone else this coming week?')
+    q9 = StringField('🤗 What are my top 3 goals for the next 3 years?')
+    q10 = StringField('🕺 Have any of my recent actions moved me closer to my goals?')
+    q11 = StringField('🌈 What am I looking forward to during the upcoming week?')
+    q12 = StringField('✨ What am I most grateful for?', validators=[DataRequired()])
+    q13 = StringField('🕺 Have any of my recent actions moved me closer to my goals?')
+    q14 = StringField('😊 How can I help someone else this coming week?')
+    submit = SubmitField('Submit')

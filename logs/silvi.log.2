@@ -1,4 +1,77 @@
-2019-10-29 21:07:07,774 ERROR: Exception on / [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+2019-10-29 21:06:29,102 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\werkzeug\routing.py", line 1799, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "C:\Users\sean\Documents\silvi\app\errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\sean\Documents\silvi\app\templates\404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\sean\Documents\silvi\app\templates\base.html", line 23, in top-level template code
+    <a href="{{ url_for('weekly_reflection') }}">Weekly Reflection</a>
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'weekly_reflection'. Did you mean 'reflection' instead?
+2019-10-29 21:06:42,298 ERROR: Exception on /reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\sean\Documents\silvi\app\routes.py", line 85, in reflection
+    form = ReflectionForm()
+NameError: name 'ReflectionForm' is not defined
+2019-10-29 21:06:54,029 ERROR: Exception on / [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -41,88 +114,4 @@ Traceback (most recent call last):
   File "c:\users\sean\documents\silvi\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'weekly_reflection'. Did you mean 'reflection' instead?
-2019-10-29 21:09:51,109 ERROR: Exception on / [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 12, in index
-    return render_template('index.html', title='Home')
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\sean\Documents\silvi\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\sean\Documents\silvi\app\templates\base.html", line 23, in top-level template code
-    <a href="{{ url_for('weekly_reflection') }}">Weekly Reflection</a>
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'weekly_reflection'. Did you mean 'reflection' instead?
-2019-10-29 21:10:30,902 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 21:10:44,654 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 21:10:58,359 ERROR: Exception on /weekly_reflection [GET] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 85, in weekly_reflection
-    form = WeeklyReflectionForm()
-NameError: name 'WeeklyReflectionForm' is not defined
-2019-10-29 21:11:46,642 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
-2019-10-29 21:14:27,052 ERROR: Exception on /weekly_reflection [POST] [in c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\sean\documents\silvi\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\sean\Documents\silvi\app\routes.py", line 87, in weekly_reflection
-    answer = Reflection(q1=form.q1.data, q2=form.q2.data, q3=form.q3.data, q4=form.q4.data,
-NameError: name 'Reflection' is not defined
-2019-10-29 21:15:31,759 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-10-29 21:06:59,433 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]

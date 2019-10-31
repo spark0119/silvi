@@ -1,8 +1,8 @@
 from flask import Flask, render_template, flash, redirect, url_for, request
 from app import app, db
-from app.forms import LoginForm, RegistrationForm, EditProfileForm
+from app.forms import LoginForm, RegistrationForm, EditProfileForm, WeeklyReflectionForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User
+from app.models import User, Weekly_Reflection
 from datetime import datetime
 from werkzeug.urls import url_parse
 
@@ -78,3 +78,18 @@ def edit_profile():
         form.about_me.data = current_user.about_me
     return render_template('edit_profile.html', title='Edit Profile',
                            form=form)
+
+@app.route('/weekly_reflection', methods=['GET','POST'])
+@login_required
+def weekly_reflection():
+    form = WeeklyReflectionForm()
+    if form.validate_on_submit():
+        answer = Weekly_Reflection(q1=form.q1.data, q2=form.q2.data, q3=form.q3.data, q4=form.q4.data,
+                             q5=form.q5.data, q6=form.q6.data, q7=form.q7.data, q8=form.q8.data,
+                             q9=form.q9.data, q10=form.q10.data, q11=form.q11.data, q12=form.q12.data,
+                             q13=form.q13.data, q14=form.q14.data)
+        db.session.add(answer)
+        db.session.commit()
+        flash('You have successfully submitted your reflection for the week!')
+        return redirect(url_for('index'))
+    return render_template('weekly_refle    ction.html', title='Weekly Reflection', form=form)
