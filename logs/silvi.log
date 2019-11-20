@@ -74,3 +74,6 @@ sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: weekl
 [parameters: (None, '2019-10-31 14:06:03.628989', 'asdf', '', '', '', '', '', '', '', '', '', '', '', '', '')]
 (Background on this error at: http://sqlalche.me/e/e3q8)
 2019-10-31 11:06:54,636 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-11-20 11:25:33,824 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-11-20 11:26:53,035 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
+2019-11-20 11:27:18,016 INFO: Silvi startup [in C:\Users\sean\Documents\silvi\app\__init__.py:45]
